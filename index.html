@@ -188,30 +188,6 @@
             --progress-bar-color: var(--accent-color);
         }
 
-        .progress-bar {
-            display: block;
-            width: 33%;
-            height: 10%;
-            max-height: 2px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            border-radius: 25px;
-            box-shadow: 0px 3px 10px 3px rgba(0, 0, 0, 0.5), 0px 0px 5px 1px rgba(0, 0, 0, 0.6);
-            border: 1px solid rgba(255, 255, 255, 0.9);
-            background-color: rgba(0, 0, 0, 0.5);
-        }
-
-        .update-bar {
-            background-color: var(--accent-color);
-            width: 0%;
-            height: 100%;
-            border-radius: 25px;
-            float: left;
-            transition: width 0.3s;
-        }
-
         .view-3d-button {
             display: inline-block;
             background: var(--accent-color);
@@ -359,9 +335,6 @@
 
             <model-viewer src="resources/apartment.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls
                 tone-mapping="neutral" shadow-intensity="1" auto-rotate>
-                <div class="progress-bar" slot="progress-bar">
-                    <div class="update-bar"></div>
-                </div>
             </model-viewer>
         </div>
 
