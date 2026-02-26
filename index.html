@@ -269,6 +269,22 @@
             cursor: pointer;
             border: none;
         }
+
+        .category-section h3 {
+            margin: 25px 0 15px;
+            color: var(--secondary-color);
+            font-size: 1.3em;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .image-card.portrait img {
+            height: auto;
+            max-height: 700px;
+            object-fit: contain;
+            background: #fafafa;
+        }
     </style>
 </head>
 
@@ -353,7 +369,7 @@
         <div class="category-section">
             <h2>🌆 Vistas y Balcón</h2>
             <div class="image-grid">
-                <div class="image-card" style="grid-column: span 2;"><img src="resources/vista_panorámica.jpeg"
+                <div class="image-card" style="grid-column: span 2;"><img src="resources/vista_panoramica.jpeg"
                         alt="Vista Panorámica" style="height: auto;"></div>
             </div>
         </div>
@@ -362,11 +378,11 @@
         <div class="category-section">
             <h2>🛏️ Habitación Principal</h2>
             <div class="image-grid">
-                <div class="image-card"><img src="resources/habitación_principal_1.jpeg" alt="Habitación Principal 1">
+                <div class="image-card"><img src="resources/habitacion_principal_1.jpeg" alt="Habitación Principal 1">
                 </div>
-                <div class="image-card"><img src="resources/habitación_principal_2.jpeg" alt="Habitación Principal 2">
+                <div class="image-card"><img src="resources/habitacion_principal_2.jpeg" alt="Habitación Principal 2">
                 </div>
-                <div class="image-card"><img src="resources/habitación_principal_3.jpeg" alt="Habitación Principal 3">
+                <div class="image-card"><img src="resources/habitacion_principal_3.jpeg" alt="Habitación Principal 3">
                 </div>
             </div>
         </div>
@@ -375,15 +391,15 @@
         <div class="category-section">
             <h2>🧸 Habitaciones Auxiliares</h2>
             <div class="image-grid">
-                <div class="image-card"><img src="resources/habitación_social_1_1.jpeg" alt="Habitación Social 1-1">
+                <div class="image-card"><img src="resources/habitacion_social_1_1.jpeg" alt="Habitación Social 1-1">
                 </div>
-                <div class="image-card"><img src="resources/habitación_social_1_2.jpeg" alt="Habitación Social 1-2">
+                <div class="image-card"><img src="resources/habitacion_social_1_2.jpeg" alt="Habitación Social 1-2">
                 </div>
-                <div class="image-card"><img src="resources/habitación_social_1_3.jpeg" alt="Habitación Social 1-3">
+                <div class="image-card"><img src="resources/habitacion_social_1_3.jpeg" alt="Habitación Social 1-3">
                 </div>
-                <div class="image-card"><img src="resources/habitación_social_2_1.jpeg" alt="Habitación Social 2-1">
+                <div class="image-card"><img src="resources/habitacion_social_2_1.jpeg" alt="Habitación Social 2-1">
                 </div>
-                <div class="image-card"><img src="resources/habitación_social_2_2.jpeg" alt="Habitación Social 2-2">
+                <div class="image-card"><img src="resources/habitacion_social_2_2.jpeg" alt="Habitación Social 2-2">
                 </div>
             </div>
         </div>
@@ -392,10 +408,10 @@
         <div class="category-section">
             <h2>🚿 Baños</h2>
             <div class="image-grid">
-                <div class="image-card"><img src="resources/baño_principal_1_1.jpeg" alt="Baño Principal 1"></div>
-                <div class="image-card"><img src="resources/baño_principal_1_2.jpeg" alt="Baño Principal 2"></div>
-                <div class="image-card"><img src="resources/baño_principal_1_3.jpeg" alt="Baño Principal 3"></div>
-                <div class="image-card"><img src="resources/baño_social.jpeg" alt="Baño Social"></div>
+                <div class="image-card"><img src="resources/bano_principal_1_1.jpeg" alt="Baño Principal 1"></div>
+                <div class="image-card"><img src="resources/bano_principal_1_2.jpeg" alt="Baño Principal 2"></div>
+                <div class="image-card"><img src="resources/bano_principal_1_3.jpeg" alt="Baño Principal 3"></div>
+                <div class="image-card"><img src="resources/bano_social.jpeg" alt="Baño Social"></div>
             </div>
         </div>
 
@@ -411,8 +427,71 @@
         <div class="category-section">
             <h2>📦 Cuarto Útil</h2>
             <div class="image-grid">
-                <div class="image-card"><img src="resources/cuarto_útil_1.jpeg" alt="Cuarto Útil 1"></div>
-                <div class="image-card"><img src="resources/cuarto_útil_2.jpeg" alt="Cuarto Útil 2"></div>
+                <div class="image-card portrait"><img src="resources/cuarto_util_1.jpeg" alt="Cuarto Útil 1"></div>
+                <div class="image-card portrait"><img src="resources/cuarto_util_2.jpeg" alt="Cuarto Útil 2"></div>
+            </div>
+        </div>
+
+        <!-- Áreas Comunes -->
+        <div class="category-section">
+            <h2>🌳 Áreas Comunes</h2>
+
+            <h3>🌿 Jardines</h3>
+            <div class="image-grid">
+                <div class="image-card"><img src="resources/area_comun_jardin_frontal_1.jpeg" alt="Jardín Frontal 1">
+                </div>
+                <div class="image-card"><img src="resources/area_comun_jardin_frontal_2.jpeg" alt="Jardín Frontal 2">
+                </div>
+                <div class="image-card"><img src="resources/area_comun_jardin_lateral_1.jpeg" alt="Jardín Lateral 1">
+                </div>
+                <div class="image-card"><img src="resources/area_comun_jardin_lateral_2.jpeg" alt="Jardín Lateral 2">
+                </div>
+                <div class="image-card"><img src="resources/area_comun_jardin_trasero_1.jpeg" alt="Jardín Trasero 1">
+                </div>
+                <div class="image-card"><img src="resources/area_comun_jardin_trasero_2.jpeg" alt="Jardín Trasero 2">
+                </div>
+                <div class="image-card"><img src="resources/area_comun_jardin_trasero_3.jpeg" alt="Jardín Trasero 3">
+                </div>
+                <div class="image-card"><img src="resources/area_comun_jardin_trasero_4.jpeg" alt="Jardín Trasero 4">
+                </div>
+            </div>
+
+            <h3>⚽ Juegos (Mascotas, Niños, Cancha)</h3>
+            <div class="image-grid">
+                <div class="image-card"><img src="resources/area_comun_parque_mascotas.jpeg" alt="Parque de Mascotas">
+                </div>
+                <div class="image-card"><img src="resources/area_comun_juego_ninos.jpeg" alt="Juegos para Niños"></div>
+                <div class="image-card"><img src="resources/area_comun_cancha.jpeg" alt="Cancha de Fútbol/Baloncesto">
+                </div>
+            </div>
+
+            <h3>💪 Gym</h3>
+            <div class="image-grid">
+                <div class="image-card"><img src="resources/area_comun_gimnasio.jpeg" alt="Gimnasio"></div>
+            </div>
+
+            <h3>🏙️ Terraza</h3>
+            <div class="image-grid">
+                <div class="image-card"><img src="resources/area_comun_terraza_1.jpeg" alt="Terraza 1"></div>
+                <div class="image-card"><img src="resources/area_comun_terraza_2.jpeg" alt="Terraza 2"></div>
+            </div>
+
+            <h3>🛗 Elevador y Pisos</h3>
+            <div class="image-grid">
+                <div class="image-card portrait"><img src="resources/area_comun_elevadores_cantidad_de_pisos.jpeg"
+                        alt="Elevadores y total de pisos"></div>
+            </div>
+
+            <h3>✨ Otros Espacios</h3>
+            <div class="image-grid">
+                <div class="image-card"><img src="resources/area_comun_piscina_1.jpeg" alt="Piscina 1"></div>
+                <div class="image-card"><img src="resources/area_comun_piscina_2.jpeg" alt="Piscina 2"></div>
+                <div class="image-card"><img src="resources/area_comun_coworking.jpeg" alt="Coworking"></div>
+                <div class="image-card"><img src="resources/area_comun_salon_social.jpeg" alt="Salón Social"></div>
+                <div class="image-card"><img src="resources/area_comun_parqueadero_bicicletas.jpeg" alt="Bicicletero">
+                </div>
+                <div class="image-card"><img src="resources/area_comun_puente.jpeg" alt="Puente"></div>
+                <div class="image-card"><img src="resources/area_comun_trasera_1.jpeg" alt="Área Trasera"></div>
             </div>
         </div>
 
