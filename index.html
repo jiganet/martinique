@@ -105,6 +105,68 @@
             margin: 30px 0;
         }
 
+        /* Mobile Optimization */
+        @media screen and (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+
+            .container {
+                padding: 20px 15px;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            h2 {
+                font-size: 1.3em;
+            }
+
+            .description {
+                font-size: 1em;
+                padding: 15px;
+            }
+
+            .info-item {
+                margin-left: 0 !important;
+                display: block;
+                margin-bottom: 5px;
+            }
+        }
+
+        .info-group {
+            margin-bottom: 20px;
+        }
+
+        .info-group h3 {
+            font-size: 1.1em;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .info-list {
+            list-style: none;
+            padding-left: 5px;
+        }
+
+        .info-list li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 8px;
+        }
+
+        .info-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
         @media print {
             body {
                 background: white;
@@ -208,24 +270,37 @@
         <h1>✨ Espectacular Apartamento en Venta ✨</h1>
 
         <div class="description">
-            🏡 <strong>Características:</strong>
-            • 88 m² - Muy iluminado y con vista panorámica
-            • 3 habitaciones
-            • 2 baños
-            • Habitación principal con vestier
-            • Cocina abierta y moderna
-            • Sala de ropas independiente
-            • Balcón en L con vista panorámica
-            • Parqueadero cubierto
-            • Cuarto útil en el mismo piso
+            <div class="info-group">
+                <h3>🏡 Características:</h3>
+                <ul class="info-list">
+                    <li>88 m² - Muy iluminado y con vista panorámica</li>
+                    <li>3 habitaciones</li>
+                    <li>2 baños</li>
+                    <li>Habitación principal con vestier</li>
+                    <li>Cocina abierta y moderna</li>
+                    <li>Sala de ropas independiente</li>
+                    <li>Balcón en L con vista panorámica</li>
+                    <li>Parqueadero cubierto</li>
+                    <li>Cuarto útil en el mismo piso</li>
+                </ul>
+            </div>
 
-            📍 Ubicado en piso 8 (sin poniente)
-            🏗 Construcción de 4 años
-            🏢 Una sola torre de 13 pisos
+            <div class="info-group">
+                <h3>📍 Ubicación y Torre:</h3>
+                <ul class="info-list">
+                    <li>Ubicado en piso 8 (sin poniente)</li>
+                    <li>Construcción de 4 años</li>
+                    <li>Una sola torre de 13 pisos</li>
+                </ul>
+            </div>
 
-            💰 <strong>Datos adicionales:</strong>
-            • Estrato 4
-            • Predial: $2.600.000 / Administración: $734.000
+            <div class="info-group">
+                <h3>💰 Datos adicionales:</h3>
+                <ul class="info-list">
+                    <li>Estrato 4</li>
+                    <li>Predial: $2.600.000 / Administración: $734.000</li>
+                </ul>
+            </div>
         </div>
 
         <div class="price-tag">
