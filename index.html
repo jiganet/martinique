@@ -88,6 +88,38 @@
             border-radius: 8px;
             overflow: hidden;
             transition: transform 0.3s ease;
+            position: relative;
+        }
+
+        .download-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(255, 255, 255, 0.85);
+            border: none;
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s, transform 0.2s;
+            text-decoration: none;
+            color: var(--primary-color);
+            z-index: 10;
+        }
+
+        .download-btn:hover {
+            background: rgba(255, 255, 255, 1);
+            transform: scale(1.1);
+        }
+
+        .download-icon {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
         }
 
         .image-card img {
@@ -292,6 +324,13 @@
     <div class="container">
         <h1>✨ Espectacular Apartamento en Venta ✨</h1>
 
+        <div
+            style="background: white; padding: 20px; border-radius: 8px; border-left: 5px solid var(--accent-color); margin-bottom: 20px; font-size: 1.1em; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+            <p>👋 ¡Hola! Me llamo <strong>Julián Gómez</strong> soy el propietario y actualmente vivo en este hermoso
+                apartamento junto a
+                mi familia. Monté esta página con la información relevante.</p>
+        </div>
+
         <div class="description">
             <!-- Bloque Izquierdo -->
             <div class="info-column">
@@ -325,7 +364,7 @@
                     <h3>💰 Datos adicionales</h3>
                     <ul class="info-list">
                         <li>Estrato 4</li>
-                        <li>Predial: $2.600.000 (anual)</li>
+                        <li>Predial: $2.800.000 (anual)</li>
                         <li>Administración: $734.000</li>
                     </ul>
                 </div>
@@ -340,7 +379,7 @@
         <div class="category-section">
             <h2>📐 Plano del Apartamento</h2>
             <div style="width: 100%; height: 600px; border: 1px solid #ddd; border-radius: 8px; overflow: hidden;">
-                <iframe src="resources/APARTAMENTO TIPO D-8D ARQ.pdf" width="100%" height="100%"
+                <iframe src="resources/apartamento_tipo_d_8d_arq.pdf" width="100%" height="100%"
                     style="border: none;"></iframe>
             </div>
         </div>
@@ -506,7 +545,7 @@
         </div>
 
         <div class="footer">
-            <p><strong>¿Interesado? ¡Hablemos!</strong></p>
+            <p><strong>Si le interesa, no dude en contactarme.</strong></p>
             <img class="qr-code"
                 src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://wa.me/573116344184"
                 alt="QR WhatsApp">
@@ -517,6 +556,29 @@
             <p style="margin-top: 20px; font-size: 0.8em; color: #999;">Escanea el código o haz clic en el botón</p>
         </div>
     </div>
+
+    <!-- Script para agregar botones de descarga a las imágenes -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const imageCards = document.querySelectorAll('.image-card');
+            imageCards.forEach(card => {
+                const img = card.querySelector('img');
+                if (img) {
+                    const downloadBtn = document.createElement('a');
+                    const srcAttr = img.getAttribute('src');
+                    const filename = srcAttr ? srcAttr.split('/').pop() : 'imagen.jpeg';
+
+                    downloadBtn.href = img.src;
+                    downloadBtn.download = filename;
+                    downloadBtn.className = 'download-btn';
+                    downloadBtn.title = 'Descargar imagen';
+                    downloadBtn.innerHTML = '<svg class="download-icon" viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>';
+
+                    card.appendChild(downloadBtn);
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
